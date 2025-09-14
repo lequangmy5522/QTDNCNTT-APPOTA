@@ -10,7 +10,7 @@
   <meta name="keywords" content="Appota, Công ty Cổ phần Appota, AppotaPay, Adsota, Gamota, Kdata, Fintech, Mobile Game, Giải trí số, Hệ sinh thái công nghệ, Việt Nam">
 
   <!-- Favicons -->
-  <link href="https://appota.com/wp-content/uploads/2023/06/favicon.png" rel="icon">
+ <link href="assets/img/Apota2.png" rel="icon" type="image/png">
   <link href="https://appota.com/wp-content/uploads/2023/06/favicon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -40,10 +40,7 @@
       <div class="top-row d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Logo chính thức của Appota -->
-          <img src="assets/img/anh1.jpg" alt="Appota Logo">
-          <h1 class="sitename"> Corporation</h1>
-        </a>
-
+   <img src="assets/img/Apota.png" alt="Appota Logo" style="width: 150px; height: auto;>
         <div class="d-flex align-items-center">
           <div class="social-links">
             <a href="https://www.facebook.com/AppotaCorp" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -55,9 +52,9 @@
 
     </div>
 
-    <div class="nav-wrap">
-      <div class="container d-flex justify-content-center position-relative">
-        <nav id="navmenu" class="navmenu">
+    <div class="nav-wrap" id="navbar">
+  <div class="container d-flex justify-content-center position-relative">
+    <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">Trang chủ</a></li>
             <li><a href="#about">Giới thiệu</a></li>
@@ -171,7 +168,7 @@
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="image-wrapper">
-              <img src="assets/img/about/appota-team.jpg" alt="Appota Team" class="img-fluid">
+              <img src="assets/img/about/anh6.png" alt="Appota Team" class="img-fluid">
               <div class="floating-element">
                 <div class="quote-content">
                   <blockquote>
@@ -1624,7 +1621,7 @@
   <div class="col-lg-4">
     <div class="footer-content">
       <a href="index.html" class="logo d-flex align-items-center mb-4">
-        <img src="assets/img/anh1.jpg" alt="Appota Logo" class="me-2" style="height:40px;">
+        <img src="assets/img/Apota.png" alt="Appota Logo" class="me-2" style="height:40px;">
         <span class="sitename">Appota Corporation</span>
       </a>
       <p class="mb-4">
@@ -1754,6 +1751,23 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
 
+  window.addEventListener("scroll", function () {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // Cuộn xuống -> Ẩn
+      navbar.style.top = "-80px"; // chỉnh theo chiều cao navbar thực tế
+    } else {
+      // Cuộn lên -> Hiện
+      navbar.style.top = "0";
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
 </body>
 </html>
